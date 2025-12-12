@@ -1,0 +1,46 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#06b6d4;
+  --glass: rgba(255,255,255,0.03);
+  --radius:16px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#071029);color:#e6eef6}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1100px;margin:32px auto;padding:24px}
+
+header{display:flex;align-items:center;gap:18px}
+.avatar{width:96px;height:96px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#042a2f}
+h1{margin:0;font-size:28px}
+p.lead{margin:6px 0 0;color:var(--muted)}
+
+.grid{display:grid;grid-template-columns:1fr 340px;gap:22px;margin-top:22px}
+
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+
+.about p{line-height:1.6;color:#cfe7f2}
+
+.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.skill{background:var(--glass);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;font-size:13px;border:1px solid rgba(255,255,255,0.03)}
+
+.projects{display:grid;grid-template-columns:1fr;gap:12px}
+.project{display:flex;flex-direction:column;gap:8px;padding:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+.project h3{margin:0;font-size:16px}
+.project p{margin:0;color:var(--muted);font-size:14px}
+.project .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+.contact-list{display:flex;flex-direction:column;gap:10px}
+.small{font-size:13px;color:var(--muted)}
+
+footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr;}
+  header{gap:12px}
+  .avatar{width:80px;height:80px}
+}
+
